@@ -1,0 +1,20 @@
+
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "baseUrl": "./",
+      "outDir": "./dist",
+      "target": "es2017",
+      "esModuleInterop": true,
+      "typeRoots": [
+        "node_modules/@types"
+      ]
+    },
+    "include": [
+      "./src/**/*.ts", "index.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+  }
+  

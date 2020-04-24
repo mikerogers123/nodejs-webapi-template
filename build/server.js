@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const express_1 = tslib_1.__importDefault(require("express"));
+const body_parser_1 = tslib_1.__importDefault(require("body-parser"));
+const configureRoutes_js_1 = require("./api/routes/configureRoutes.js");
+const app = express_1.default();
+const port = process.env.PORT || 3001;
+app.use(body_parser_1.default.urlencoded({ extended: true }));
+app.use(body_parser_1.default.json());
+configureRoutes_js_1.configureRoutes(app);
+app.listen(port);

@@ -2,17 +2,25 @@
   "name": "hca",
   "version": "1.0.0",
   "description": "Healthcare Assistant Web API",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "ts-node index.ts",
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "prestart": "npm run build"
   },
   "author": "Mike Rogers",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "@types/node": "^13.13.2",
+    "@types/express": "^4.17.6",
+    "nodemon": "^2.0.3",
+    "tslint": "^6.1.1",
+    "typescript": "^3.8.3"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "ts-node": "^8.9.0"
   }
 }
