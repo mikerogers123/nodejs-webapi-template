@@ -1,7 +1,7 @@
 {
   "name": "hca",
   "version": "1.0.0",
-  "description": "Healthcare Assistant Web API",
+  "description": "express, TypeScript, mocha sample",
   "main": "dist/index.js",
   "scripts": {
     "test": "ts-mocha 'test/**/*.ts'",
